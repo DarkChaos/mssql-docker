@@ -20,15 +20,14 @@ hostname: mssqllatest
 sa_password: "Toughpass1!"
 containers:
   ports:
-      containerPort: 1433
+    containerPort: 1433
 
 podAnnotations: {}
 
-podSecurityContext:
-   fsGroup: 10001
+podSecurityContext: {}
 
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 1433
 
 pvc:
